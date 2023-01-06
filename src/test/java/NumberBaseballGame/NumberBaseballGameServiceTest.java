@@ -1,11 +1,9 @@
 package NumberBaseballGame;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class NumberBaseballGameServiceTest {
 
@@ -13,7 +11,7 @@ class NumberBaseballGameServiceTest {
     @DisplayName("randomNumber가 랜덤넘버를 생성하는지 테스트")
     void 랜덤넘버_생성_테스트() {
         // when
-        RandomNumber randomNumber = new RandomNumber();
+        Number randomNumber = new Number();
 
         //then
         Integer number = randomNumber.get();
