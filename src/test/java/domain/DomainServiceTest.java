@@ -12,8 +12,8 @@ class DomainServiceTest {
     void play_NOTHING_test() {
         Integer com = 123;
         Integer user = 456;
-        String playResult = domainService.play(123, 456);
+        PlayResult playResult = domainService.play(123, 456);
 
-        assertThat(playResult).isEqualTo("NOTHING");
+        assertThat(playResult).isEqualTo(PlayResult.NOTHING);
     }
 }
