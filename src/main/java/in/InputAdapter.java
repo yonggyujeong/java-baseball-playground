@@ -2,6 +2,8 @@ package in;
 
 import lombok.RequiredArgsConstructor;
 
+import java.util.Arrays;
+
 @RequiredArgsConstructor
 public class InputAdapter {
     // 입력 어댑터의 역할
@@ -16,6 +18,10 @@ public class InputAdapter {
 
     public Integer convertInputToNumber(String str) {
         return Integer.valueOf(str);
+    }
+
+    public String[] convertInputToArrays(String str) {
+        return str.split("");
     }
 
     private void validateIsThreeChar(String str) {
