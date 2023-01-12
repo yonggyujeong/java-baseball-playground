@@ -30,4 +30,11 @@ class inputAdapterTest {
         }).isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("숫자만 입력해 주세요");
     }
+
+    @Test
+    void 문자타입인_숫자를_숫자타입으로_변경_Test() {
+        String stringTypeNumber = "123";
+        Integer intTypeNumber = inputAdapter.convertInputToNumber(stringTypeNumber);
+        assertThat(intTypeNumber).isEqualTo(intTypeNumber).isEqualTo(123);
+    }
 }

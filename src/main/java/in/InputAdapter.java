@@ -14,6 +14,10 @@ public class InputAdapter {
         validateIsNumber(str);
     }
 
+    public Integer convertInputToNumber(String str) {
+        return Integer.valueOf(str);
+    }
+
     private void validateIsThreeChar(String str) {
         if (str.length() == 3) {
             return;
