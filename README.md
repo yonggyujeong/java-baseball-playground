@@ -24,3 +24,15 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+1. 랜덤 값을 생성한다.
+2. 입력 값을 받는다.
+3. 두 값을 비교하여 결과를 반환한다.
+- 123, 123 -> 3 Strike
+- 123, 142 -> 1S 1B
+- 234 -> 325 -> 2B
+- 123, 456 -> NOTHING
+
+Ball(위치값, 숫자)
+1, 2 - 1, 2 : Strike
+1, 3 - 2, 3 : Ball
+1, 3 - 2, 4 : NOTHING, BALL, STRIKE... 
