@@ -3,7 +3,9 @@ package domain;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class Balls {
@@ -14,6 +16,14 @@ public class Balls {
             Integer number = Integer.parseInt(strings[i]);
              balls[i] = new Ball(i+1, number);
         }
+    }
+
+    public List<PlayResult> compareWithBalls(Balls userBalls) {
+        ArrayList<PlayResult> playResults= new ArrayList<>();
+        for (Ball userBall : userBalls.balls) {
+            playResults.add(this.compareWithBall(userBall));
+        }
+        return  playResults;
     }
 
     public PlayResult compareWithBall(Ball ball) {
